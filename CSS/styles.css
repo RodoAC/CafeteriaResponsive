@@ -66,9 +66,10 @@ input[type='checkbox']:checked::after {
 }
 
 .contenedor {
-  width: 800px;
-  margin: auto;
   position: relative;
+  max-width: 800px;
+  margin: auto;
+ 
 }
 
 .background-general {
@@ -100,8 +101,9 @@ input[type='checkbox']:checked::after {
 }
 
 .cafes {
+  margin-top: 60px;
+  margin-bottom: -60px;
   color: #412B19;
-  margin-bottom: 60px;
 }
 
 /* SELECTOR DESCENDENTE */
@@ -187,6 +189,7 @@ input[type='checkbox']:checked::after {
 .left {
   float: left;
   position: relative;
+  top: -120px;
 }
 
 .contenedor-cafe-a {
