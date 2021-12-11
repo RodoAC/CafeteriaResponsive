@@ -1,6 +1,23 @@
+.burger-button {
+  width: 40px;
+  border-radius: 50%;
+  line-height: 35px;
+  height: 40px;
+  text-align: center;
+  background: #dd944c;
+  display: inline-block;
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  z-index: 3;
+  display: none;
+}
+
+
 /*768 para tablets y esta dentro de los 800px q vamos a trabajar*/
 /* prtada*/
 @media screen and (max-width: 800px) {
+
   .titulo {
     font-size: 45px;
     margin-top: 0;
@@ -130,12 +147,60 @@
 
 /* CELULARES */
 @media screen and (max-width: 500px) {
+  .portada .button{
+    display: block;
+  }
+  .burger-button {
+    display: block;
+  }
+  .portada .contenedor{
+    position: static;
+  }
+
+  /*Pagina de precios*/
+  .header{
+    position: static;
+  }
+  .header .contenedor{
+    position: static;
+  }
+  .titulo-precios {
+    font-size: 32px;
+  }
+  .titulo-precios img{
+    width: 60px;
+  }
+
+  /*FIN Pagina de precios*/
+
+  .menu{
+    /* border: 1px solid tomato; */
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: -100%;
+    bottom: 0;
+    z-index: 2;
+    background-color: rgba(156, 83, 12, 0.7);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    transition: .3s;
+  }
+  .active{
+    left: 0;
+  }
+
   .menu li{
     display: block;
     margin: 0;
     padding: 8px 0;
     border-bottom: 1px solid white;
   }
+  .menu ul{
+    flex: 1;
+  }
+
   .menu li:first-child {
     border-top: 1px solid white;
   }
